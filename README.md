@@ -1,9 +1,10 @@
 # smtp_message — Email ↔ Telegram bridge
 
-Open-source Telegram bot that keeps people reachable when Telegram access is unstable (VPN issues, blocks, travel).  
+Open-source Telegram bot for moments when the phone is not at hand, notifications are off,  
+or Telegram suddenly stops working and you still need to stay in touch with your work group.  
 It bridges **group chat ↔ email**: tag a user, send mail; they reply by email, the answer lands back in the thread.
 
-**Idea:** stay in touch without replacing Telegram — email is a fallback channel.
+**Idea:** stay in touch without replacing Telegram — email is a quiet secondary channel.
 
 ## Try the live bot
 
@@ -133,4 +134,4 @@ MIT (or set your preferred license before publishing).
 
 ---
 
-Built as a practical fallback bridge: **Telegram first, email when needed.**
+Built as a practical bridge: **Telegram first, email when you might miss a ping.**

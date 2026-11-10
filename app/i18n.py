@@ -43,7 +43,9 @@ _TEXTS: dict[str, dict[str, str]] = {
     "privacy": {
         "en": (
             "Privacy\n\n"
-            "This bot helps you stay reachable (e.g. when VPN/Telegram access is unstable) "
+            "This bot helps you stay reachable when the phone is not at hand, "
+            "Telegram notifications are off, or Telegram suddenly stops working "
+            "and you still need to stay in touch with your work group — "
             "via an email ↔ Telegram bridge.\n"
             "We do not collect extra data: essentially only the Telegram ID ↔ email binding "
             "(plus temporary delivery threads for replies).\n"
@@ -55,8 +57,9 @@ _TEXTS: dict[str, dict[str, str]] = {
         ),
         "ru": (
             "Конфиденциальность\n\n"
-            "Идея бота — помочь оставаться на связи (например, когда VPN/доступ к Telegram нестабилен), "
-            "через мост email ↔ Telegram.\n"
+            "Идея бота — помочь оставаться на связи, когда телефон не под рукой, "
+            "уведомления Telegram выключены, или вдруг перестал работать Telegram, "
+            "а вам нужно быть на связи с рабочей группой — через мост email ↔ Telegram.\n"
             "Мы не собираем лишние данные: по сути только связка Telegram ID и ваш email "
             "(плюс служебные треды для доставки ответов).\n"
             "Данные не используются в коммерческих целях.\n"
