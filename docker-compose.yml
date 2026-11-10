@@ -5,6 +5,6 @@ services:
     env_file:
       - .env
     restart: unless-stopped
-    # Чтобы mongodb://... на хосте был доступен из контейнера:
+    # Reach Mongo on the host from the container via host.docker.internal
     extra_hosts:
       - "host.docker.internal:host-gateway"
