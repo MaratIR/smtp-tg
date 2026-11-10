@@ -1,0 +1,4 @@
+aiogram>=3.13,<4
+pymongo>=4.10,<5
+python-dotenv>=1.0,<2
+aiosmtplib>=3.0,<4
