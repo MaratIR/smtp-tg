@@ -1,0 +1,10 @@
+services:
+  bot:
+    image: ${BOT_IMAGE}
+    container_name: smtp_message_bot
+    env_file:
+      - .env
+    restart: unless-stopped
+    # Чтобы mongodb://... на хосте был доступен из контейнера:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
