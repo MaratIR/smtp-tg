@@ -5,6 +5,8 @@ import contextlib
 import logging
 
 from aiogram import Bot, Dispatcher
+from aiogram.client.session.aiohttp import AiohttpSession
+from aiogram.client.telegram import TelegramAPIServer
 
 from app.bot_handlers import handle_incoming_mail, router
 from app.config import load_config
@@ -24,7 +26,13 @@ async def main() -> None:
         message_retention_hours=config.message_retention_hours,
     )
     mail = MailService(config)
-    bot = Bot(token=config.bot_token)
+
+    session = None
+    if config.telegram_api_base:
+        api = TelegramAPIServer.from_base(config.telegram_api_base.rstrip("/"))
+        session = AiohttpSession(api=api)
+        logging.info("Using custom Telegram API base: %s", config.telegram_api_base)
+    bot = Bot(token=config.bot_token, session=session)
     dp = Dispatcher()
     dp["store"] = store
     dp["mail"] = mail

@@ -29,6 +29,8 @@ class Config:
     mail_poll_interval: int
     data_encryption_key: str
     message_retention_hours: int
+    # Например https://tg-proxy.example.com — без /bot..., aiogram сам допишет
+    telegram_api_base: str | None
 
 
 def load_config() -> Config:
@@ -62,4 +64,5 @@ def load_config() -> Config:
         mail_poll_interval=int(os.getenv("MAIL_POLL_INTERVAL", "30")),
         data_encryption_key=data_encryption_key,
         message_retention_hours=int(os.getenv("MESSAGE_RETENTION_HOURS", "72")),
+        telegram_api_base=(os.getenv("TELEGRAM_API_BASE") or "").strip() or None,
     )
