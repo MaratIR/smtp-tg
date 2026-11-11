@@ -6,6 +6,10 @@ It bridges **group chat ↔ email**: tag a user, send mail; they reply by email,
 
 **Idea:** stay in touch without replacing Telegram — email is a quiet secondary channel.
 
+Example of what arrives in the inbox after `[mail_it]` / `[мыльни]`:
+
+![Example email from the Telegram bridge](docs/email-example.png)
+
 ## Try the live bot
 
 Public demo: **[@email_itbot](https://t.me/email_itbot)**
